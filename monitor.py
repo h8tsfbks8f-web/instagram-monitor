@@ -19,8 +19,6 @@ def send_message(text):
     )
 
 
-from pathlib import Path
-
 file_path = Path(__file__).parent / "usernames.txt"
 
 with open(file_path, encoding="utf-8") as file:
