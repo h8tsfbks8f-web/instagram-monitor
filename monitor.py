@@ -41,7 +41,7 @@ def check(username):
         return "error"
 
 
-with open("usernames.txt", encoding="utf-8") as f:
+with open("username.txt", encoding="utf-8") as f:
     usernames = [
         x.strip().lstrip("@")
         for x in f
