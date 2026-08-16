@@ -1,5 +1,6 @@
 import os
 import requests
+from pathlib import Path
 
 TOKEN = os.environ["TELEGRAM_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
@@ -18,7 +19,11 @@ def send_message(text):
     )
 
 
-with open("usernames.txt", encoding="utf-8") as file:
+from pathlib import Path
+
+file_path = Path(__file__).parent / "usernames.txt"
+
+with open(file_path, encoding="utf-8") as file:
     usernames = [
         line.strip().lstrip("@")
         for line in file
