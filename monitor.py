@@ -42,13 +42,13 @@ def check(username):
 
 
 with open("username.txt", encoding="utf-8") as f:
-    usernames = [
+    username = [
         x.strip().lstrip("@")
         for x in f
         if x.strip()
     ]
 
-for username in usernames:
+for username in username:
     status = check(username)
 
     if status == "not_found":
